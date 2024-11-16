@@ -1,5 +1,5 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import GearPage from "./GearPage";
+import GearPage from "./GearPage";  //gear page
 
 function App() {
   return (
