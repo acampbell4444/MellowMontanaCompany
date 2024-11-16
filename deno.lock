@@ -20,8 +20,8 @@
     "npm:@eslint/js@^9.13.0": "9.15.0",
     "npm:@fontsource/pacifico@^5.1.0": "5.1.0",
     "npm:@fontsource/quicksand@^5.1.0": "5.1.0",
-    "npm:@mui/icons-material@^6.1.7": "6.1.7_@mui+material@6.1.7__@types+react@18.3.12__react@18.3.1__react-dom@18.3.1___react@18.3.1_@types+react@18.3.12_react@18.3.1_@emotion+react@11.13.3__react@18.3.1_@emotion+styled@11.13.0__@emotion+react@11.13.3___react@18.3.1__react@18.3.1_react-dom@18.3.1__react@18.3.1",
-    "npm:@mui/material@^6.1.7": "6.1.7_@types+react@18.3.12_react@18.3.1_react-dom@18.3.1__react@18.3.1",
+    "npm:@mui/icons-material@^6.1.7": "6.1.7_@mui+material@6.1.7__@emotion+react@11.13.3___react@18.3.1__@emotion+styled@11.13.0___@emotion+react@11.13.3____react@18.3.1___react@18.3.1__@types+react@18.3.12__react@18.3.1__react-dom@18.3.1___react@18.3.1_@types+react@18.3.12_react@18.3.1_@emotion+react@11.13.3__react@18.3.1_@emotion+styled@11.13.0__@emotion+react@11.13.3___react@18.3.1__react@18.3.1_react-dom@18.3.1__react@18.3.1",
+    "npm:@mui/material@^6.1.7": "6.1.7_@emotion+react@11.13.3__react@18.3.1_@emotion+styled@11.13.0__@emotion+react@11.13.3___react@18.3.1__react@18.3.1_@types+react@18.3.12_react@18.3.1_react-dom@18.3.1__react@18.3.1",
     "npm:@types/react-dom@^18.3.1": "18.3.1",
     "npm:@types/react@^18.3.12": "18.3.12",
     "npm:@vitejs/plugin-react@^4.3.3": "4.3.3_vite@5.4.11_@babel+core@7.26.0",
@@ -505,43 +505,23 @@
     "@mui/core-downloads-tracker@6.1.7": {
       "integrity": "sha512-POuIBi80BZBogQkG4PQKIGwy4QFwB+kOr+OI4k7Znh7LqMAIhwB9OC00l6M+w1GrZJYj3T8R5WX8G6QAIvoVEw=="
     },
-    "@mui/icons-material@6.1.7_@mui+material@6.1.7__@types+react@18.3.12__react@18.3.1__react-dom@18.3.1___react@18.3.1_@types+react@18.3.12_react@18.3.1_@emotion+react@11.13.3__react@18.3.1_@emotion+styled@11.13.0__@emotion+react@11.13.3___react@18.3.1__react@18.3.1_react-dom@18.3.1__react@18.3.1": {
+    "@mui/icons-material@6.1.7_@mui+material@6.1.7__@emotion+react@11.13.3___react@18.3.1__@emotion+styled@11.13.0___@emotion+react@11.13.3____react@18.3.1___react@18.3.1__@types+react@18.3.12__react@18.3.1__react-dom@18.3.1___react@18.3.1_@types+react@18.3.12_react@18.3.1_@emotion+react@11.13.3__react@18.3.1_@emotion+styled@11.13.0__@emotion+react@11.13.3___react@18.3.1__react@18.3.1_react-dom@18.3.1__react@18.3.1": {
       "integrity": "sha512-RGzkeHNArIVy5ZQ12bq/8VYNeICEyngngsFskTJ/2hYKhIeIII3iRGtaZaSvLpXh7h3Fg3VKTulT+QU0w5K4XQ==",
       "dependencies": [
         "@babel/runtime",
-        "@mui/material@6.1.7_@types+react@18.3.12_react@18.3.1_react-dom@18.3.1__react@18.3.1_@emotion+react@11.13.3__react@18.3.1_@emotion+styled@11.13.0__@emotion+react@11.13.3___react@18.3.1__react@18.3.1",
+        "@mui/material",
         "@types/react",
         "react"
       ]
     },
-    "@mui/material@6.1.7_@types+react@18.3.12_react@18.3.1_react-dom@18.3.1__react@18.3.1": {
-      "integrity": "sha512-KsjujQL/A2hLd1PV3QboF+W6SSL5QqH6ZlSuQoeYz9r69+TnyBFIevbYLxdjJcJmGBjigL5pfpn7hTGop+vhSg==",
-      "dependencies": [
-        "@babel/runtime",
-        "@mui/core-downloads-tracker",
-        "@mui/system@6.1.7_@types+react@18.3.12_react@18.3.1",
-        "@mui/types",
-        "@mui/utils",
-        "@popperjs/core",
-        "@types/react",
-        "@types/react-transition-group",
-        "clsx",
-        "csstype",
-        "prop-types",
-        "react",
-        "react-dom",
-        "react-is@18.3.1",
-        "react-transition-group"
-      ]
-    },
-    "@mui/material@6.1.7_@types+react@18.3.12_react@18.3.1_react-dom@18.3.1__react@18.3.1_@emotion+react@11.13.3__react@18.3.1_@emotion+styled@11.13.0__@emotion+react@11.13.3___react@18.3.1__react@18.3.1": {
+    "@mui/material@6.1.7_@emotion+react@11.13.3__react@18.3.1_@emotion+styled@11.13.0__@emotion+react@11.13.3___react@18.3.1__react@18.3.1_@types+react@18.3.12_react@18.3.1_react-dom@18.3.1__react@18.3.1": {
       "integrity": "sha512-KsjujQL/A2hLd1PV3QboF+W6SSL5QqH6ZlSuQoeYz9r69+TnyBFIevbYLxdjJcJmGBjigL5pfpn7hTGop+vhSg==",
       "dependencies": [
         "@babel/runtime",
         "@emotion/react",
         "@emotion/styled",
         "@mui/core-downloads-tracker",
-        "@mui/system@6.1.7_@types+react@18.3.12_react@18.3.1_@emotion+react@11.13.3__react@18.3.1_@emotion+styled@11.13.0__@emotion+react@11.13.3___react@18.3.1__react@18.3.1",
+        "@mui/system",
         "@mui/types",
         "@mui/utils",
         "@popperjs/core",
@@ -566,19 +546,7 @@
         "react"
       ]
     },
-    "@mui/styled-engine@6.1.7_react@18.3.1": {
-      "integrity": "sha512-Ou4CxN7MQmwrfG1Pu6EYjPgPChQXxPDJrwgizLXlRPOad5qAq4gYXRuzrGQ2DfGjjwmJhjI8T6A0SeapAZPGig==",
-      "dependencies": [
-        "@babel/runtime",
-        "@emotion/cache",
-        "@emotion/serialize",
-        "@emotion/sheet",
-        "csstype",
-        "prop-types",
-        "react"
-      ]
-    },
-    "@mui/styled-engine@6.1.7_react@18.3.1_@emotion+react@11.13.3__react@18.3.1_@emotion+styled@11.13.0__@emotion+react@11.13.3___react@18.3.1__react@18.3.1": {
+    "@mui/styled-engine@6.1.7_@emotion+react@11.13.3__react@18.3.1_@emotion+styled@11.13.0__@emotion+react@11.13.3___react@18.3.1__react@18.3.1_react@18.3.1": {
       "integrity": "sha512-Ou4CxN7MQmwrfG1Pu6EYjPgPChQXxPDJrwgizLXlRPOad5qAq4gYXRuzrGQ2DfGjjwmJhjI8T6A0SeapAZPGig==",
       "dependencies": [
         "@babel/runtime",
@@ -592,29 +560,14 @@
         "react"
       ]
     },
-    "@mui/system@6.1.7_@types+react@18.3.12_react@18.3.1": {
-      "integrity": "sha512-qbMGgcC/FodpuRSfjXlEDdbNQaW++eATh0vNBcPUv2/YXSpReoOpoT9FhogxEBNks+aQViDXBRZKh6HX2fVmwg==",
-      "dependencies": [
-        "@babel/runtime",
-        "@mui/private-theming",
-        "@mui/styled-engine@6.1.7_react@18.3.1",
-        "@mui/types",
-        "@mui/utils",
-        "@types/react",
-        "clsx",
-        "csstype",
-        "prop-types",
-        "react"
-      ]
-    },
-    "@mui/system@6.1.7_@types+react@18.3.12_react@18.3.1_@emotion+react@11.13.3__react@18.3.1_@emotion+styled@11.13.0__@emotion+react@11.13.3___react@18.3.1__react@18.3.1": {
+    "@mui/system@6.1.7_@emotion+react@11.13.3__react@18.3.1_@emotion+styled@11.13.0__@emotion+react@11.13.3___react@18.3.1__react@18.3.1_@types+react@18.3.12_react@18.3.1": {
       "integrity": "sha512-qbMGgcC/FodpuRSfjXlEDdbNQaW++eATh0vNBcPUv2/YXSpReoOpoT9FhogxEBNks+aQViDXBRZKh6HX2fVmwg==",
       "dependencies": [
         "@babel/runtime",
         "@emotion/react",
         "@emotion/styled",
         "@mui/private-theming",
-        "@mui/styled-engine@6.1.7_react@18.3.1_@emotion+react@11.13.3__react@18.3.1_@emotion+styled@11.13.0__@emotion+react@11.13.3___react@18.3.1__react@18.3.1",
+        "@mui/styled-engine",
         "@mui/types",
         "@mui/utils",
         "@types/react",
