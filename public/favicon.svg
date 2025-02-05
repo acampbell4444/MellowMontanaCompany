@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Background -->
+  <rect width="100" height="100" fill="#4B9CD3"/>
+  
+  <!-- Mountain silhouettes -->
+  <path d="M0 70 L30 30 L60 70 L100 40 L100 100 L0 100 Z" fill="#2B5F8A"/>
+  <path d="M20 80 L50 40 L80 80 L100 60 L100 100 L0 100 L0 80 Z" fill="#1A365D"/>
+  
+  <!-- Stylized "M" -->
+  <path d="M30 35 L40 45 L50 35 L60 45 L70 35 L65 50 L50 65 L35 50 Z" fill="#FFFFFF"/>
+  
+  <!-- Stars -->
+  <circle cx="75" cy="25" r="2" fill="#FFFFFF"/>
+  <circle cx="85" cy="30" r="1.5" fill="#FFFFFF"/>
+  <circle cx="70" cy="15" r="1.5" fill="#FFFFFF"/>
+</svg>

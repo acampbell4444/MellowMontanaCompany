@@ -1,4 +1,4 @@
-import { FC, useState } from "react";
+import React,{ FC, useState } from "react";
 import {
   AppBar,
   Box,
@@ -111,7 +111,7 @@ const LandingPage: FC = () => {
   const drawer = (
     <Paper sx={{ height: "100%", bgcolor: "rgba(0, 0, 0, 0.9)" }}>
       <List>
-        {["Water Sports", "Locations", "About", "Book Now"].map((text) => (
+        {["Parasailing", "Wakeboarding", "Rentals", "Book Now"].map((text) => (
           <ListItem component="button" key={text}>
             <ListItemText
               primary={text}
@@ -160,9 +160,9 @@ const LandingPage: FC = () => {
               )
               : (
                 <Box sx={{ display: "flex", gap: 4 }}>
-                  <Button color="inherit">WATER SPORTS</Button>
-                  <Button color="inherit">LOCATIONS</Button>
-                  <Button color="inherit">ABOUT</Button>
+                  <Button color="inherit">PARASAILING</Button>
+                  <Button color="inherit">WAKE-BOARDING</Button>
+                  <Button color="inherit">RENTALS</Button>
                   <HeroButton
                     variant="contained"
                     sx={{
