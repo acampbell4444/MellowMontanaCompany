@@ -1,4 +1,4 @@
-import React, { FC, useState } from "react";
+import { FC, useState } from "react";
 import {
   AppBar,
   Box,
@@ -14,7 +14,6 @@ import {
   Paper,
   Toolbar,
   Typography,
-  useTheme,
   useMediaQuery,
 } from "@mui/material";
 import { Menu as MenuIcon } from "@mui/icons-material";
@@ -22,24 +21,25 @@ import { styled } from "@mui/material/styles";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 
 // Custom styled components using Material UI's styled API
-const HeroBackground = styled(Box)(({ theme }) => ({
-  position: 'fixed',
+const HeroBackground = styled(Box)(() => ({
+  position: "fixed",
   top: 0,
   left: 0,
   right: 0,
   bottom: 0,
-  backgroundImage: "url(https://lirp.cdn-website.com/md/pexels/dms3rep/multi/opt/pexels-photo-259881-1920w.jpeg)",
-  backgroundSize: 'cover',
-  backgroundPosition: 'center',
+  backgroundImage:
+    "url(https://lirp.cdn-website.com/md/pexels/dms3rep/multi/opt/pexels-photo-259881-1920w.jpeg)",
+  backgroundSize: "cover",
+  backgroundPosition: "center",
   zIndex: -1,
-  '&::after': {
+  "&::after": {
     content: '""',
-    position: 'absolute',
+    position: "absolute",
     top: 0,
     left: 0,
     right: 0,
     bottom: 0,
-    backgroundColor: 'rgba(0, 0, 0, 0.3)',
+    backgroundColor: "rgba(0, 0, 0, 0.3)",
   },
 }));
 
@@ -47,33 +47,33 @@ const HeroButton = styled(Button)(({ theme }) => ({
   padding: theme.spacing(2, 6),
   borderRadius: theme.shape.borderRadius,
   fontWeight: 600,
-  letterSpacing: '0.1em',
+  letterSpacing: "0.1em",
 }));
 
 // Create theme with Material UI
 const theme = createTheme({
   palette: {
-    mode: 'dark',
+    mode: "dark",
     primary: {
-      main: '#ffffff',
+      main: "#ffffff",
     },
     secondary: {
-      main: '#000000',
+      main: "#000000",
     },
   },
   typography: {
     fontFamily: "'Montserrat', sans-serif",
     h1: {
-      fontSize: '4rem',
+      fontSize: "4rem",
       fontWeight: 700,
-      letterSpacing: '0.2em',
-      [createTheme().breakpoints.down('md')]: {
-        fontSize: '2.5rem',
+      letterSpacing: "0.2em",
+      [createTheme().breakpoints.down("md")]: {
+        fontSize: "2.5rem",
       },
     },
     h4: {
       fontWeight: 300,
-      letterSpacing: '0.15em',
+      letterSpacing: "0.15em",
     },
   },
   components: {
@@ -83,15 +83,15 @@ const theme = createTheme({
       },
       styleOverrides: {
         root: {
-          backgroundColor: 'transparent',
+          backgroundColor: "transparent",
         },
       },
     },
     MuiButton: {
       styleOverrides: {
         root: {
-          textTransform: 'uppercase',
-          letterSpacing: '0.1em',
+          textTransform: "uppercase",
+          letterSpacing: "0.1em",
         },
       },
     },
@@ -100,7 +100,7 @@ const theme = createTheme({
 
 const LandingPage: FC = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
-  const isMobile = useMediaQuery(theme.breakpoints.down('md'));
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
@@ -109,17 +109,17 @@ const LandingPage: FC = () => {
   const drawerWidth = 240;
 
   const drawer = (
-    <Paper sx={{ height: '100%', bgcolor: 'rgba(0, 0, 0, 0.9)' }}>
+    <Paper sx={{ height: "100%", bgcolor: "rgba(0, 0, 0, 0.9)" }}>
       <List>
-        {['Water Sports', 'Locations', 'About', 'Book Now'].map((text) => (
+        {["Water Sports", "Locations", "About", "Book Now"].map((text) => (
           <ListItem component="button" key={text}>
-            <ListItemText 
-              primary={text}  
-              sx={{ 
-                '& .MuiListItemText-primary': { 
-                  letterSpacing: '0.1em',
-                  textAlign: 'center' 
-                } 
+            <ListItemText
+              primary={text}
+              sx={{
+                "& .MuiListItemText-primary": {
+                  letterSpacing: "0.1em",
+                  textAlign: "center",
+                },
               }}
             />
           </ListItem>
@@ -131,50 +131,52 @@ const LandingPage: FC = () => {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <Box sx={{ minHeight: '100vh', position: 'relative' }}>
+      <Box sx={{ minHeight: "100vh", position: "relative" }}>
         <HeroBackground />
-        
+
         {/* Navigation */}
         <AppBar position="fixed">
-          <Toolbar sx={{ justifyContent: 'space-between' }}>
-            <Typography 
-              variant="h6" 
-              sx={{ 
-                letterSpacing: '0.2em',
-                fontWeight: 600 
+          <Toolbar sx={{ justifyContent: "space-between" }}>
+            <Typography
+              variant="h6"
+              sx={{
+                letterSpacing: "0.2em",
+                fontWeight: 600,
               }}
             >
               MELLOW MONTANA CO.
             </Typography>
 
-            {isMobile ? (
-              <IconButton
-                color="inherit"
-                aria-label="open drawer"
-                edge="start"
-                onClick={handleDrawerToggle}
-              >
-                <MenuIcon />
-              </IconButton>
-            ) : (
-              <Box sx={{ display: 'flex', gap: 4 }}>
-                <Button color="inherit">WATER SPORTS</Button>
-                <Button color="inherit">LOCATIONS</Button>
-                <Button color="inherit">ABOUT</Button>
-                <HeroButton 
-                  variant="contained" 
-                  sx={{ 
-                    bgcolor: 'white',
-                    color: 'black',
-                    '&:hover': {
-                      bgcolor: 'rgba(255,255,255,0.9)',
-                    }
-                  }}
+            {isMobile
+              ? (
+                <IconButton
+                  color="inherit"
+                  aria-label="open drawer"
+                  edge="start"
+                  onClick={handleDrawerToggle}
                 >
-                  BOOK NOW
-                </HeroButton>
-              </Box>
-            )}
+                  <MenuIcon />
+                </IconButton>
+              )
+              : (
+                <Box sx={{ display: "flex", gap: 4 }}>
+                  <Button color="inherit">WATER SPORTS</Button>
+                  <Button color="inherit">LOCATIONS</Button>
+                  <Button color="inherit">ABOUT</Button>
+                  <HeroButton
+                    variant="contained"
+                    sx={{
+                      bgcolor: "white",
+                      color: "black",
+                      "&:hover": {
+                        bgcolor: "rgba(255,255,255,0.9)",
+                      },
+                    }}
+                  >
+                    BOOK NOW
+                  </HeroButton>
+                </Box>
+              )}
           </Toolbar>
         </AppBar>
 
@@ -189,10 +191,10 @@ const LandingPage: FC = () => {
               keepMounted: true, // Better mobile performance
             }}
             sx={{
-              display: { xs: 'block', md: 'none' },
-              '& .MuiDrawer-paper': { 
-                boxSizing: 'border-box', 
-                width: drawerWidth 
+              display: { xs: "block", md: "none" },
+              "& .MuiDrawer-paper": {
+                boxSizing: "border-box",
+                width: drawerWidth,
               },
             }}
           >
@@ -201,60 +203,60 @@ const LandingPage: FC = () => {
         </Box>
 
         {/* Main Content */}
-        <Container 
-          maxWidth="lg" 
-          sx={{ 
+        <Container
+          maxWidth="lg"
+          sx={{
             pt: { xs: 12, md: 20 },
             pb: 8,
-            minHeight: '100vh',
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'center'
+            minHeight: "100vh",
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
           }}
         >
           <Grid container spacing={4}>
             <Grid item xs={12} md={8}>
-              <Typography 
-                variant="h1" 
+              <Typography
+                variant="h1"
                 gutterBottom
-                sx={{ 
-                  textShadow: '2px 2px 4px rgba(0,0,0,0.3)',
+                sx={{
+                  textShadow: "2px 2px 4px rgba(0,0,0,0.3)",
                 }}
               >
                 DISCOVER CLARITY
               </Typography>
-              <Typography 
-                variant="h4" 
+              <Typography
+                variant="h4"
                 gutterBottom
-                sx={{ 
+                sx={{
                   mb: 6,
-                  textShadow: '1px 1px 2px rgba(0,0,0,0.3)',
+                  textShadow: "1px 1px 2px rgba(0,0,0,0.3)",
                 }}
               >
                 FLATHEAD WATER SPORTS
               </Typography>
-              <Box sx={{ display: 'flex', gap: 3, flexWrap: 'wrap' }}>
-                <HeroButton 
+              <Box sx={{ display: "flex", gap: 3, flexWrap: "wrap" }}>
+                <HeroButton
                   variant="contained"
-                  sx={{ 
-                    bgcolor: 'white',
-                    color: 'black',
-                    '&:hover': {
-                      bgcolor: 'rgba(255,255,255,0.9)',
-                    }
+                  sx={{
+                    bgcolor: "white",
+                    color: "black",
+                    "&:hover": {
+                      bgcolor: "rgba(255,255,255,0.9)",
+                    },
                   }}
                 >
                   BOOK YOUR ADVENTURE
                 </HeroButton>
-                <HeroButton 
+                <HeroButton
                   variant="outlined"
                   sx={{
-                    borderColor: 'white',
-                    color: 'white',
-                    '&:hover': {
-                      borderColor: 'rgba(255,255,255,0.9)',
-                      bgcolor: 'rgba(255,255,255,0.1)',
-                    }
+                    borderColor: "white",
+                    color: "white",
+                    "&:hover": {
+                      borderColor: "rgba(255,255,255,0.9)",
+                      bgcolor: "rgba(255,255,255,0.1)",
+                    },
                   }}
                 >
                   LEARN MORE
@@ -265,14 +267,14 @@ const LandingPage: FC = () => {
         </Container>
 
         {/* Footer */}
-        <Paper 
-          component="footer" 
+        <Paper
+          component="footer"
           elevation={0}
           sx={{
-            position: 'fixed',
+            position: "fixed",
             bottom: 0,
-            width: '100%',
-            bgcolor: 'transparent',
+            width: "100%",
+            bgcolor: "transparent",
             py: 3,
           }}
         >
@@ -284,9 +286,13 @@ const LandingPage: FC = () => {
                 </Typography>
               </Grid>
               <Grid item>
-                <Box sx={{ display: 'flex', gap: 3 }}>
-                  <Button color="inherit" sx={{ opacity: 0.8 }}>Instagram</Button>
-                  <Button color="inherit" sx={{ opacity: 0.8 }}>Facebook</Button>
+                <Box sx={{ display: "flex", gap: 3 }}>
+                  <Button color="inherit" sx={{ opacity: 0.8 }}>
+                    Instagram
+                  </Button>
+                  <Button color="inherit" sx={{ opacity: 0.8 }}>
+                    Facebook
+                  </Button>
                   <Button color="inherit" sx={{ opacity: 0.8 }}>Contact</Button>
                 </Box>
               </Grid>
