@@ -173,7 +173,7 @@ const LandingPage: FC = () => {
                       },
                     }}
                   >
-                    BOOK NOW
+                    BOOK NOW!
                   </HeroButton>
                 </Box>
               )}
